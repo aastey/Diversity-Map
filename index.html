@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<div class="container dmap-app-container">
+		<div class="dmap-header-container">
+			<h2 class="dmap-header">Mapping the USA’s diversity, 1960-2060</h2>
+			<p class="dmap-header-text">The USA TODAY Diversity Index shows diversity has surged in the last 50 years and is expected to continue rising. The U.S. index rose from 20 in 1960 to 55 in 2010. Driven by changing attitudes and a record wave of immigration, the pace of change varies widely, sometimes even in adjacent counties. </p>
+	</div>
+		<div class="dmap-main-box">
+			<div class="dmap-zoom-controls">
+				<div class="dmap-zoom-btn dmap-zoom-in" rel="in"></div>
+				<p class="dmap-reset-map">Reset</p>
+				<div class="dmap-zoom-btn dmap-zoom-out" rel="out"></div>
+			</div>
+			
+			<div id="dmapContainer" class="dmap-container"></div>
+			<div class="dmap-tooltip">
+				<p class="dmap-tooltip-state"></p>
+				<p class="dmap-tooltip-county"></p>
+			</div>
+			
+			<div class="dmap-legend-container">
+				<div class="dmap-legend-bar color0"></div>
+				<div class="dmap-legend-bar-text"> No Data </div>
+				<div class="dmap-legend-bar color1"></div>
+				<div class="dmap-legend-bar-text"> 0 - 15 </div>
+				<div class="dmap-legend-bar color2"></div>
+				<div class="dmap-legend-bar-text"> 16 - 30 </div>
+				<div class="dmap-legend-bar color3"></div>
+				<div class="dmap-legend-bar-text"> 31 - 45 </div>
+				<div class="dmap-legend-bar color4"></div>
+				<div class="dmap-legend-bar-text"> 46 - 55 </div>
+				<div class="dmap-legend-bar color5"></div>
+				<div class="dmap-legend-bar-text"> 56 - 100 </div>
+			</div>
+			<div class="dmap-slider-container">
+				<div class="ui-slider-legend">
+					<p class="slider-step 1960-step" id="i_di60">1960</p>
+					<p class="slider-step 1970-step" id="i_di70">1970</p>
+					<p class="slider-step 1980-step" id="i_di80">1980</p>
+					<p class="slider-step 1990-step" id="i_di90">1990</p>
+					<p class="slider-step 2000-step" id="i_di00">2000</p>
+					<p class="slider-step 2010-step active" id="i_di10">2010</p>
+					<p class="slider-step 2020-step" id="i_di20p">2020</p>
+					<p class="slider-step 2030-step" id="i_di30p">2030</p>
+					<p class="slider-step 2040-step" id="i_di40p">2040</p>
+					<p class="slider-step 2050-step" id="i_di50p">2050</p>
+					<p class="slider-step 2060-step" id="i_di60p">2060</p>
+				</div>
+				<div id="slider"></div>	
+			</div>
+		</div>
+		<div class="dmap-side-bar">
+			<div class="dlegend-tooltip">
+				<p><span class="dlegend-race-label"></span><span class="dlegend-tooltip-amount"></span></p>
+			</div>
+			<div class="dmap-county-text-container">
+				<div class="dmap-legend-text">
+					<h3 class="dmap-sub-header">
+						<span class="national-name"></span> 
+						<span class="county-name"></span> 
+						<span class="state-name"></span>
+						<span class="text-filler">i</span>
+					</h3>
+					<p class="dmap-legend-p dmap-diversity-label"><span class="dmap-legend-label"> Diversity index: </span><span class="d-index"></span>
+					<p class="dmap-legend-p"><span class="dmap-legend-label"> Population: </span><span class="total-pop"></span>
+					
+					
+					<h3 class="dmap-chart-header">Race breakdown</h3>
+					<p class="dmap-chart-text">“Other” includes any other groups counted in that year.</p>
+					
+					<div id="dmap-main-chart" class="dmap-main-chart-container"></div>	
+					<div class="dmap-main-chart-legend">
+						<div class="dmap-main-chart-legend-box dmap-white-box"></div><p class= "dmap-main-chart-legend-text">White</p>
+						<div class="dmap-main-chart-legend-box dmap-black-box"></div><p class= "dmap-main-chart-legend-text">Black</p>
+						<div class="dmap-main-chart-legend-box dmap-other-box"></div><p class= "dmap-main-chart-legend-text">Other</p>
+					</div>
+
+					<h3 class="dmap-chart-header">Hispanic share</h3>
+					<p class="dmap-chart-text">Hispanics can be of any race.</p>
+					<div id="dmap-hispanic-chart" class="dmap-hispanic-chart-container"></div>	
+					<p class="dmap-chart-footer">*p = projection</p>			
+				</div>
+			</div>
+		</div>
+		<div class="dmap-footer-box">
+			<p class="dmap-credit-list"><span class="dmap-credit-label">Credits: </span> Paul Overberg, <span class="dmap-credit-label">USA TODAY </span>Amanda Astey, Sarah Frostenson, Anthony DeBarros, <span class="dmap-credit-label">Gannett Digital</span></p>
+			<p class="dmap-credit-list"><span class="dmap-credit-label">Source: </span>USA TODAY analysis of data from Census Bureau; NHGIS, University of Minnesota; ProximityOne, Alexandria, Va.</p>
+		</div>
+
+</div>
+<script src='js/lib/jquery.min.js'></script>
+<script src='js/lib/jquery-ui.min.js'></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="js/lib/queue.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="js/lib/animate-patch.js"></script>
+<script src="js/map.js"></script>
+
+</body>
+</html>
+

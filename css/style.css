@@ -1,0 +1,652 @@
+
+
+@font-face {
+    font-family: 'Futura Today';
+    src: url(http://www.gannett-cdn.com/GDContent/global/fonts/futura_today_normal.eot);
+    src: url(http://www.gannett-cdn.com/GDContent/global/fonts/futura_today_normal.eot?#iefix) format('embedded-opentype'), url(http://www.gannett-cdn.com/GDContent/global/fonts/futura_today_normal.woff) format('woff'), url(http://www.gannett-cdn.com/GDContent/global/fonts/futura_today_normal.ttf) format('truetype'), url(http://www.gannett-cdn.com/GDContent/global/fonts/futura_bold-webfont.svg#FuturaBold) format('svg');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura Today Light';
+    src: url(http://i.usatoday.net/news/graphics/elections-2012-app/static/fonts/futura_today_light.eot);
+    src: url(http://i.usatoday.net/news/graphics/elections-2012-app/static/fonts/futura_today_light.eot?#iefix) format('embedded-opentype'), url(http://i.usatoday.net/news/graphics/elections-2012-app/static/fonts/futura_today_light.woff) format('woff'), url(http://i.usatoday.net/news/graphics/elections-2012-app/static/fonts/futura_today_light.ttf) format('truetype'), url(http://i.usatoday.net/news/graphics/elections-2012-app/static/fonts/futura_light-webfont.svg#FuturaLight) format('svg');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura Today DemiBold';
+    src: url(http://i.usatoday.net/news/graphics/elections-2012-app/static/fonts/futura_today_demibold.eot);
+    src: url(http://i.usatoday.net/news/graphics/elections-2012-app/static/fonts/futura_today_demibold.eot?#iefix) format('embedded-opentype'), url(http://i.usatoday.net/news/graphics/elections-2012-app/static/fonts/futura_today_demibold.woff) format('woff'), url(http://i.usatoday.net/news/graphics/elections-2012-app/static/fonts/futura_today_demibold.ttf) format('truetype'), url(http://i.usatoday.net/news/graphics/elections-2012-app/static/fonts/futura_bold-webfont.svg#FuturaDemiBold) format('svg');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura Today Bold';
+    src: url(http://i.usatoday.net/news/graphics/elections-2012-app/static/fonts/futura_today_bold.eot);
+    src: url(http://i.usatoday.net/news/graphics/elections-2012-app/static/fonts/futura_today_bold.eot?#iefix) format('embedded-opentype'), url(http://i.usatoday.net/news/graphics/elections-2012-app/static/fonts/futura_today_bold.woff) format('woff'), url(http://i.usatoday.net/news/graphics/elections-2012-app/static/fonts/futura_today_bold.ttf) format('truetype'), url(http://i.usatoday.net/news/graphics/elections-2012-app/static/fonts/futura_bold-webfont.svg#FuturaBold) format('svg');
+    font-style: normal;
+}
+.dmap-app-container {
+	background: #fff;
+	float:left;
+	padding: 0;
+	width: 100%;
+	max-width: 998px;
+	border: 1px solid #ccc;
+	border-top: none;
+	position: relative
+}
+.dmap-app-container:before {
+	content: "";
+	border-color: rgb(0, 155, 255);
+	display: block;
+	border-top: 10px solid rgb(0, 155, 255);
+	position: relative;
+	width: 100.3%;
+	left: -1px;
+}
+.dmap-main-box{
+	z-index: 10;
+	float: left;
+	margin: 10px 20px 0 20px;
+	background-color: rgb(255,255,255);
+	width: 624px;
+}
+
+.dmap-side-bar {
+	z-index: 1;
+	padding: 0px 20px 0 20px;
+	margin-top: 0px;
+	float: right;
+	width: 294px;	
+}
+.mapBack {
+	fill:none;
+	pointer-events: all;
+}
+.dmap-header-container {
+	background: #f8f8f8 url("../img/head-wrap-bg.jpg") bottom repeat-x;
+	padding: 0 0 20px;
+	margin: 0 0 10px;
+}
+.dmap-header {
+	font: 20px 'Futura Today Bold', Arial, Helvetica, sans-serif;
+	padding: 15px 20px 0;
+	margin: 0;
+	text-transform: uppercase;
+}
+.dmap-header-text {
+	font: normal 12px/1.5 'arial','helvetica',sans-serif;
+	color: #666;
+	margin: 7px 20px;
+}
+.dmap-sub-header {
+	font-family: 'helvetica','arial',sans-serif;
+	font-weight: 700;
+	color: #333;
+	margin: 5px 0 15px;
+	font-size: 18px
+}
+.text-filler {
+	color: white;
+}
+.dmap-hover-sub-header {
+	font-family: 'Futura Today DemiBold', arial, sans-serif;
+	margin-bottom: 0px;
+	padding-bottom: 5px;
+	margin-top: 5px;
+	font-size: 14pt;
+	text-align:center;
+	color: rgb(190,190,190);
+	display: block;
+}
+.dmap-chart-header {
+	font-family: 'helvetica','arial',sans-serif;
+	font-weight: 700;
+	color: #333;
+	font-size: 14px;
+	margin-bottom: 0px;
+	float: left;
+	padding-bottom: 5px;
+	margin-top: 20px;
+}
+.dmap-chart-text {
+	font: normal 12px/1.5 'arial','helvetica',sans-serif;
+	color: rgb(102,102,103);
+	margin: 0px 0 5px 0;
+	width: 100%;
+	float:left;
+}
+.dmap-chart-footer {
+	font: normal 10px/1.5 'arial','helvetica',sans-serif;
+	color: rgb(102,102,103);
+	margin: -11px 0 5px 0;
+	width: 100%;
+	float: left;
+	text-align: right;
+}
+.dmap-county-text-container {
+	width: 100%;
+	float:left;
+	padding: 0 ;
+}
+.dmap-select-text {
+	margin-top: 15px;
+}
+.dmap-container {
+	width: 100%;
+	float: left;
+	margin: 20px 0 0 15px;
+	overflow: hidden;
+}
+
+.dmap-land{
+	stroke: rgb(26,137,192);
+	stroke-width: 3px;
+	fill: rgb(26,137,192);
+}
+.dmap-state-lines {
+	stroke: rgb(26,137,192);
+	stoke-width: 1px;
+	fill:none;
+}
+.dmap-county {
+  fill: rgb(190,190,190);
+  cursor: pointer;
+   stroke: rgb(89,171,212);
+  stroke-width: .2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* Legend Styles */
+.dmap-legend-container {
+	background-color: rgba(255,255,255,1);
+	margin: 0px 0 5% 10%;
+	left: 25px;
+	bottom: 95px;
+	float: left;
+	width: 80%;
+}
+.dmap-legend-label {
+	font-family: 'helvetica';
+	font-size: 12px;
+	margin-top: 5px;
+	font-weight: bold;
+}
+.dmap-legend-text {
+	width: 100%;
+}
+.dmap-legend-p {
+	margin: 5px 0 5px 0 ;
+	font-size: 85%;
+	font-family: 'helvetica';
+	color: rgb(102,102,102);
+}
+.dmap-diversity-label .dmap-legend-label {
+	margin: 5px 0 0 0 ;
+	font-size: 14px;
+	font-family: 'helvetica';
+	text-transform: uppercase;
+}
+.d-index {
+	font-size:16px;
+	font-weight: bold;
+	color: rgb(26, 137, 192);
+}
+.dmap-legend-header {
+	font-family: 'Futura Today DemiBold', arial, sans-serif;
+	margin: 10px 0 0 0;
+	font-size: 100%;
+}
+
+.dmap-legend-bar{
+   height: 15px;
+	float: left;
+	margin: 0px 5px 0 2px;
+	border-radius: 53px;
+	width: 14px;
+
+}
+.dmap-legend-bar-text{
+    font-family: 'Futura Today', arial, sans-serif;
+    font-size: 12px;
+    color: rgb(90,90,90);
+    width: 60px;
+    float:left;
+    text-align: left;
+}
+.color0{
+	background-color: rgb(190,190,190);
+}
+.color1{
+	background-color: rgb(205,234,249);
+}
+.color2{
+	background-color: rgb(169,223,250);
+}
+.color3{
+	background-color: rgb(111,194,235) ;
+}
+.color4{
+	background-color: rgb(41,161,220);
+}
+.color5{
+	background-color: rgb(26,137,192);
+}
+
+.dmap-main-chart-legend {
+	width: 80%;
+	float:left;
+	margin-left: 20%;
+	margin-bottom: 0px;
+}
+.dmap-main-chart-legend-box {
+	width: 10px;
+	height: 10px;
+	float: left;
+	border-radius: 5px;
+}
+.dmap-white-box {
+	background-color: rgb(205,234,249);
+}
+
+.dmap-black-box {
+	background-color: rgb(26,137,192);
+}
+
+.dmap-other-box {
+	background-color: rgb(111,194,235);
+}
+.dmap-main-chart-legend-text {
+	font-size: 10px;
+	float: left;
+	width: 50px;
+	margin: -1px 0 0 6px;
+	text-transform: uppercase;
+	font-family: 'helvetica';
+}
+
+/* ###### ZOOM IN AND OUT CONTROLS ##### */
+.dmap-zoom-controls {
+	padding: 0px 10px 0px 10px;
+	border-radius: 10px;
+	width: 15%;
+	margin: 0;
+	position: absolute;
+	left: -5px;
+	top: 215px;
+}
+.dmap-reset-map{
+	background-color: rgb(255,255,255);
+	padding: 3px 10px 0px 9px;
+	border-radius: 3px;
+	width: 55px;
+	margin: 0;
+	height: 22px;
+	position: absolute;
+	left: 57px;
+	bottom: 50px;
+	border: 1px solid rgb(200,200,200);
+	cursor: pointer;
+	text-align: center;
+	font-size: 13px;
+	font-family: 'Futura Today DemiBold', 'arial';
+	text-transform: uppercase;
+}
+.dmap-zoom-in{
+	background-color: rgb(255,255,255);
+	padding: 0px 10px 0px 10px;
+	border-radius: 3px;
+	width: 5px;
+	margin: 0;
+	height: 25px;
+	position: absolute;
+	left:136px;
+	bottom: 50px;
+	border: 1px solid rgb(200,200,200);
+	background-image: url("../img/zoom-plus.png");
+	background-size: cover;
+	background-position: 0, 10px;
+	cursor: pointer;
+}
+.dmap-zoom-out {
+	background-color: rgb(255,255,255);
+	padding: 0px 10px 0px 10px;
+	border-radius: 3px;
+	width: 5px;
+	margin: 0;
+	height: 25px;
+	position: absolute;
+	left: 25px;
+	bottom: 50px;
+	border: 1px solid rgb(200,200,200);
+	background-image: url("../img/zoom-minus.png");
+	background-size: cover;
+	background-position: 0, 10px;
+	cursor: pointer;
+}
+
+.dmap-reset-map:hover,
+.dmap-zoom-out:hover,
+.dmap-zoom-in:hover {
+	background-color: rgb(205,234,249);
+}
+.dmap-county.active-state {
+	stroke: rgb(0,0,0) !important;
+	stroke-width: .5px !important;
+}
+/*  Map ToolTip Styles */
+
+.dmap-tooltip {
+  color: #222; 
+  background: #fff; 
+  padding: 5pt 8pt; 
+  text-shadow: #f5f5f5 0 1px 0;
+  border-radius: 2px; 
+  box-shadow: 0px 2px 2px 0px rgb(90,90,90); 
+  position: absolute;
+  width: 150px;
+}
+.dmap-tooltip.right-arrow:after, 
+.dmap-tooltip.right-arrow:before {
+	top: 50%;
+	left: -20px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.dmap-tooltip.right-arrow:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-right-color: #ffffff;
+	border-width: 15px;
+	margin-top: -15px;
+}
+.dmap-tooltip.right-arrow:before{
+	border-color: rgba(255, 255, 255, 0);
+	border-right-color: #ffffff;
+	border-width: 15px;
+	margin-top: -15px;
+}
+
+.dmap-tooltip.left-arrow:after, 
+.dmap-tooltip.left-arrow:before {
+	top: 50%;
+	right: -20px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.dmap-tooltip.left-arrow:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-left-color: #ffffff;
+	border-width: 15px;
+	margin-top: -15px;
+}
+.dmap-tooltip.left-arrow:before{
+	border-color: rgba(255, 255, 255, 0);
+	border-left-color: #ffffff;
+	border-width: 15px;
+	margin-top: -15px;
+}
+
+.dmap-tooltip-state {
+	margin: 0;
+	font-size: 12pt;
+	font-family: 'Futura Today DemiBold';
+	text-transform: uppercase;
+}
+.dmap-tooltip-county {
+	margin: 0;
+	font-size: 12px;
+	font-family: 'Futura Today Light';
+}
+
+
+/*  Legend ToolTip Styles */
+
+.dlegend-tooltip {
+  color: #222; 
+  background: #fff; 
+  padding: 0 8pt 5pt 8pt; 
+  text-shadow: #f5f5f5 0 1px 0;
+  border-radius: 2px; 
+  box-shadow: 0px 2px 2px 0px rgb(90,90,90); 
+  position: absolute;
+}
+.dlegend-tooltip.right-arrow:after, 
+.dlegend-tooltip.right-arrow:before {
+	top: 50%;
+	left: -20px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.dlegend-tooltip.right-arrow:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-right-color: #ffffff;
+	border-width: 15px;
+	margin-top: -15px;
+}
+.dlegend-tooltip.right-arrow:before{
+	border-color: rgba(255, 255, 255, 0);
+	border-right-color: #ffffff;
+	border-width: 15px;
+	margin-top: -15px;
+}
+
+.dlegend-tooltip.left-arrow:after, 
+.dlegend-tooltip.left-arrow:before {
+	top: 50%;
+	right: -20px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.dlegend-tooltip.left-arrow:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-left-color: #ffffff;
+	border-width: 15px;
+	margin-top: -15px;
+}
+.dlegend-tooltip.left-arrow:before{
+	border-color: rgba(255, 255, 255, 0);
+	border-left-color: #ffffff;
+	border-width: 15px;
+	margin-top: -15px;
+}
+
+.dlegend-race-label {
+	margin: 0;
+	font-size: 12px;
+	font-family: 'Futura Today Light';
+	width: 100%;
+	text-align: center;
+	float: left;
+	text-transform: uppercase;
+}
+.dlegend-tooltip-amount{
+	margin: 0;
+	font-size: 12pt;
+	width: 100%;
+	text-align: center;
+	float: left;
+	font-family: 'Futura Today DemiBold';
+}
+
+/* ###### JQUERY UI SLIDER TOOLS ##### */
+.dmap-slider-title {
+	text-align: center;
+}
+.dmap-slider-container {
+	padding: 0 0 10px 0;
+	pointer-events: all;
+	width: 100%;
+	float: left;
+}
+.ui-slider {
+	width: 95%;
+	margin-top: 30px;
+	border: 1px solid rgb(210,210,210);
+	margin-left: 2%;
+	border-radius: 10px;
+}
+.ui-slider-horizontal .ui-slider-handle,
+.ui-slider .ui-slider-handle {
+	width: 20px;
+	height: 19px;
+	background-size: cover;
+	margin-top: 0px;
+	cursor: pointer;
+	background-color: rgb(0,155,255);
+	border: 1px solid rgb(34,89,153);
+	border-radius: 20px;
+}
+.ui-slider-click-area{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	cursor: pointer;
+	top: -1px;
+	border-radius: 34px;
+	margin-left: -20px;
+	margin-top: -30px;
+}
+.ui-slider-tick-mark{
+	width: 2px;
+	background: rgb(210,210,210);
+	height: 6px;
+	float: left;
+	margin-left: 20px;
+	border-radius: 34px;
+	margin-top: 25px;
+}
+.ui-slider-legend {
+	width: 110%;
+	margin-top: 10px;
+	margin-left: 0%;
+	float: left;
+	margin-top: -6px;
+}
+.slider-step {
+	float:left;
+	font-family:'Futura Today Light';
+	font-size: 12px;
+	color: rgb(90,90,90);
+	text-transform: uppercase;
+}
+.slider-step.active {
+	color: rgb(0,155,255);
+}
+.ui-state-focus {
+	outline: none;
+}
+
+/* Bar Chart Styles */
+.tick text {
+	display:;
+}
+.bar {
+	cursor: pointer;
+}
+.dmap-hispanic-chart-container {
+	display: block;
+	float: left;
+}
+
+.dmap-main-chart-container, {
+	float: left;
+}
+.hispanic-text,
+.hispanic-bar text {
+	color: black;
+	font-size: 85%;
+	float: left;
+  	margin: 0;
+  	padding: 0;
+}
+
+.dmap-main-chart-container rect {
+  fill: rgb(205,234,249);
+}
+.dmap-hispanic-chart-container rect {
+  fill: rgb(111,194,235);
+}
+
+.dmap-hispanic-chart-container text,
+.dmap-main-chart-container text,
+.dmap-black-chart-container text,
+.dmap-other-chart-container text {
+  fill: rgb(120,120,120);
+  font: 9px sans-serif;
+  text-anchor: end;
+}
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: rgb(190,190,190);
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+
+rect {
+    shape-rendering:crispEdges;
+}
+rect.white{
+    fill:blue;
+}
+rect.black {
+    fill:red;
+}
+
+
+/* credits */
+
+.dmap-footer-box {
+	width: 100%;
+	float:left;
+	padding: 10px 0;
+	margin: 10px 0 0 0;
+	background: rgb(236,236,236);
+	min-height: 20px;
+}
+.dmap-credit-list {
+	width: 100%;
+	font: normal 11px/1.5 arial, Helvetica, sans-serif;
+	color: rgb(153,153,153);
+	font-size: 8pt;
+	float: left;
+	margin: 0px 20px 0 20px;
+	padding: 0;
+}
+.dmap-credit-label {
+	font-weight: bold;
+	margin-top: 5px;
+}
+
